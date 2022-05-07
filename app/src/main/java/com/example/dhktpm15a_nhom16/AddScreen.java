@@ -15,18 +15,16 @@ public class AddScreen extends AppCompatActivity {
     Button btnAddNV;
     EditText txtAddNameNV,txtAddAgeNV;
     DataNhanVien dataNhanVien;
-    ImageView imgAddNV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_screen);
 
-        txtAddNameNV = findViewById(R.id.txtAddNameNV);
-        txtAddAgeNV = findViewById(R.id.txtAddAgeNV);
-        imgAddNV = findViewById(R.id.imgAddNV);
+//        txtAddNameNV = findViewById(R.id.txtAddNameNV);
+//        txtAddAgeNV = findViewById(R.id.txtAddAgeNV);
 
-        dataNhanVien = new DataNhanVien(this,"nhanviendb.sqlite",null,1);
+      //  dataNhanVien = new DataNhanVien(this,"nhanviendb.sqlite",null,1);
 
 //        findViewById(R.id.btn_AddNV).setOnClickListener(new View.OnClickListener() {
 //            @Override

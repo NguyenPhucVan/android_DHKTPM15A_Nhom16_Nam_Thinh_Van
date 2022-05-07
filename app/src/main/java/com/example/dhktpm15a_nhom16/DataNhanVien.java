@@ -20,8 +20,8 @@ public class DataNhanVien extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE nhanvien (id INTEGER PRIMARY KEY autoincrement, name TEXT NOT NULL," +
-                " age INTERGER, imageNV BLOB)";
+        String sql = "CREATE TABLE nhanvien (id INTEGER PRIMARY KEY autoincrement, name TEXT NOT NULL, " +
+                "positon TEXT NOT NULL, age INTERGER, country TEXT NOT NULL )";
 
         db.execSQL(sql);
     }
@@ -31,8 +31,10 @@ public class DataNhanVien extends SQLiteOpenHelper {
 
 
         values.put("name",nhanVien.getName());
+        values.put("position",nhanVien.getAge());
         values.put("age",nhanVien.getAge());
-        values.put("imageNV",nhanVien.getImgNV());
+        values.put("country",nhanVien.getAge());
+
 
         db.insert("nhanvien",null, values);
 
@@ -56,8 +58,9 @@ public class DataNhanVien extends SQLiteOpenHelper {
                 NhanVien nhanVien = new NhanVien();
                 nhanVien.setId(cursor.getInt(0));
                 nhanVien.setName(cursor.getString(1));
-                nhanVien.setAge(cursor.getInt(2));
-                nhanVien.setImgNV(cursor.getInt(3));
+                nhanVien.setPosition(cursor.getString(2));
+                nhanVien.setAge(cursor.getInt(3));
+                nhanVien.setCountry(cursor.getString(4));
 
                 nhanVienList.add(nhanVien);
             }while(cursor.moveToNext());

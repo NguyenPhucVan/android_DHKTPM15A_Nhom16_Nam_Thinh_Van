@@ -3,23 +3,42 @@ package com.example.dhktpm15a_nhom16;
 public class NhanVien {
     private int id;
     private String name;
+    private String position;
+    private String country;
     private int age;
-    private int imgNV;
 
     public NhanVien() {
     }
 
-    public NhanVien(String name, int age, int imgNV) {
+    public NhanVien(String name, String position, int age, String country) {
         this.name = name;
+        this.position = position;
+        this.country = country;
         this.age = age;
-        this.imgNV = imgNV;
     }
 
-    public NhanVien(int id, String name, int age, int imgNV) {
+    public NhanVien(int id, String name, String position, int age, String country) {
         this.id = id;
         this.name = name;
+        this.position = position;
+        this.country = country;
         this.age = age;
-        this.imgNV = imgNV;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public int getId() {
@@ -46,13 +65,7 @@ public class NhanVien {
         this.age = age;
     }
 
-    public int getImgNV() {
-        return imgNV;
-    }
 
-    public void setImgNV(int imgNV) {
-        this.imgNV = imgNV;
-    }
 
 
 }

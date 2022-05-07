@@ -20,7 +20,7 @@ public class MainScreen extends AppCompatActivity {
     DataNhanVien dataNhanVien;
     ListView lvNhanVien;
     NhanVienAdapter adapter;
-    ArrayList NVList;
+    ArrayList<NhanVien> NVList;
     Button btnAdd;
 
     @Override
@@ -34,7 +34,30 @@ public class MainScreen extends AppCompatActivity {
 
         NVList = new ArrayList();
 
-        getNVList();
+        //getNVList();
+
+        NVList = new ArrayList<>();
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
+        NVList.add(new NhanVien("Nguyen Phuc Thinh","Quan Li",23,"Ho Chi Minh"));
 
         adapter = new NhanVienAdapter(this, R.layout.nhanvien_listview,NVList);
         lvNhanVien.setAdapter(adapter);
@@ -42,21 +65,22 @@ public class MainScreen extends AppCompatActivity {
 
         //nút + trong main screen
         findViewById(R.id.btnAdd).setOnClickListener(view -> {
-            Intent intent = new Intent(MainScreen.this, AddScreen.class);
+            Intent intent = new Intent(MainScreen.this, SignInScreen.class);
             startActivity(intent);
         });
 
     }
     //Lấy nhân viên từ sqlite
-    private ArrayList getNVList(){
-        NVList.clear();
-
-        for (Iterator iterator = dataNhanVien.getAll().iterator(); iterator.hasNext(); ) {
-            NhanVien nhanVien = (NhanVien) iterator.next();
-            NVList.add(nhanVien.getName());
-            NVList.add(nhanVien.getAge());
-            NVList.add(nhanVien.getImgNV());
-        }
-        return NVList;
-    }
+//    private ArrayList getNVList(){
+//        NVList.clear();
+//
+//        for (Iterator iterator = dataNhanVien.getAll().iterator(); iterator.hasNext(); ) {
+//            NhanVien nhanVien = (NhanVien) iterator.next();
+//            NVList.add(nhanVien.getName());
+//            NVList.add(nhanVien.getPosition());
+//            NVList.add(nhanVien.getAge());
+//            NVList.add(nhanVien.getCountry());
+//        }
+//        return NVList;
+//    }
 }
