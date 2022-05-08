@@ -1,6 +1,8 @@
 package com.example.dhktpm15a_nhom16;
 
-public class NhanVien {
+import java.io.Serializable;
+
+public class NhanVien implements Serializable {
     private int id;
     private String name;
     private String position;
@@ -21,8 +23,9 @@ public class NhanVien {
         this.id = id;
         this.name = name;
         this.position = position;
-        this.country = country;
         this.age = age;
+        this.country = country;
+
     }
 
     public String getPosition() {

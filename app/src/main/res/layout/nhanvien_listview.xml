@@ -18,12 +18,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtNameNV"
+        android:id="@+id/txtName"
         android:layout_width="282dp"
         android:layout_height="26dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view2"
@@ -35,20 +36,20 @@
         android:layout_height="24dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/txtNameNV"
-        app:layout_constraintTop_toBottomOf="@+id/txtNameNV" />
+        android:textColor="#FF515151"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnInfor"
         android:layout_width="33dp"
         android:layout_height="30dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/txtNameNV"
+        app:layout_constraintBottom_toBottomOf="@+id/txtName"
         app:layout_constraintEnd_toEndOf="@+id/view2"
         app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toEndOf="@+id/txtNameNV"
-        app:layout_constraintTop_toTopOf="@+id/txtNameNV"
+        app:layout_constraintStart_toEndOf="@+id/txtName"
+        app:layout_constraintTop_toTopOf="@+id/txtName"
         app:srcCompat="@drawable/info_icon"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 

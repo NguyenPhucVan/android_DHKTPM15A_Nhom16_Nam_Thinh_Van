@@ -1,38 +1,52 @@
 package com.example.dhktpm15a_nhom16;
 
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
+import java.util.ArrayList;
 
 public class AddScreen extends AppCompatActivity {
 
-    Button btnAddNV;
-    EditText txtAddNameNV,txtAddAgeNV;
+    EditText txtAddName, txtAddPosition,txtAddAge, txtAddCountry;
     DataNhanVien dataNhanVien;
+    NhanVien nhanVien;
+    ArrayList NVList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_screen);
 
-//        txtAddNameNV = findViewById(R.id.txtAddNameNV);
-//        txtAddAgeNV = findViewById(R.id.txtAddAgeNV);
+        txtAddName = findViewById(R.id.txtAddName);
+        txtAddPosition = findViewById(R.id.txtAddPosition);
+        txtAddAge = findViewById(R.id.txtAddAge);
+        txtAddCountry = findViewById(R.id.txtAddCountry);
 
-      //  dataNhanVien = new DataNhanVien(this,"nhanviendb.sqlite",null,1);
+        NVList = new ArrayList();
 
-//        findViewById(R.id.btn_AddNV).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dataNhanVien.addNhanVien(new NhanVien(txtAddNameNV.getText().toString(),txtAddAgeNV.getText().toString(),imgAddNV.getImage));
-//                getNameList();
-//                adapter.notifyDataSetChanged();
-//            }
-//        });
+        //nút <- trong main screen
+        findViewById(R.id.btnBack1).setOnClickListener(view -> {
+            Intent intent = new Intent(AddScreen.this, MainScreen.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btnUpdate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dataNhanVien.addNhanVien(new NhanVien(txtAddName.getText().toString(),txtAddPosition.getText().toString()
+                        ,Integer.parseInt(txtAddAge.getText().toString()),txtAddCountry.getText().toString()));
+                Toast.makeText(AddScreen.this, "Thêm nhân viên thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddScreen.this, MainScreen.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

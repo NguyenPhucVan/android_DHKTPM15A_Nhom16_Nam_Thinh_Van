@@ -21,7 +21,7 @@ public class DataNhanVien extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE nhanvien (id INTEGER PRIMARY KEY autoincrement, name TEXT NOT NULL, " +
-                "positon TEXT NOT NULL, age INTERGER, country TEXT NOT NULL )";
+                "position TEXT NOT NULL, age INTERGER Not Null, country TEXT NOT NULL )";
 
         db.execSQL(sql);
     }
@@ -31,17 +31,16 @@ public class DataNhanVien extends SQLiteOpenHelper {
 
 
         values.put("name",nhanVien.getName());
-        values.put("position",nhanVien.getAge());
+        values.put("position",nhanVien.getPosition());
         values.put("age",nhanVien.getAge());
-        values.put("country",nhanVien.getAge());
-
+        values.put("country",nhanVien.getCountry());
 
         db.insert("nhanvien",null, values);
 
     }
     public int removeNhanVien(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.delete("user","id = ?", new String[]{String.valueOf(id)});
+        return db.delete("nhanvien","id = ?", new String[]{String.valueOf(id)});
     }
 
     public List<NhanVien> getAll(){
@@ -68,6 +67,27 @@ public class DataNhanVien extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return nhanVienList;
+    }
+
+    public NhanVien getNVById(int id){
+
+        NhanVien nhanVien = new NhanVien();
+        //String sql = "select * from nhanvien where id = "+id;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("select * from nhanvien where id = ?",new String[]{id+""});
+
+        cursor.moveToFirst();
+        nhanVien.setId(cursor.getInt(0));
+        nhanVien.setName(cursor.getString(1));
+        nhanVien.setPosition(cursor.getString(2));
+        nhanVien.setAge(cursor.getInt(3));
+        nhanVien.setCountry(cursor.getString(4));
+
+        cursor.close();
+        db.close();
+        return nhanVien;
     }
 
 

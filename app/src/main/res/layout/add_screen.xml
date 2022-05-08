@@ -10,16 +10,18 @@
         android:id="@+id/view"
         class="androidx.appcompat.widget.ActionMenuView"
         android:layout_width="365dp"
-        android:layout_height="582dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack1" />
 
     <EditText
-        android:id="@+id/txtAddNameNV2"
+        android:id="@+id/txtAddName"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -33,7 +35,7 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <EditText
-        android:id="@+id/txtAddNameNV3"
+        android:id="@+id/txtAddPosition"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -42,13 +44,13 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV2"
+        app:layout_constraintEnd_toEndOf="@+id/txtAddName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV2"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV2" />
+        app:layout_constraintStart_toStartOf="@+id/txtAddName"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddName" />
 
     <EditText
-        android:id="@+id/txtAddNameNV"
+        android:id="@+id/txtAddAge"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -57,13 +59,13 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV3"
+        app:layout_constraintEnd_toEndOf="@+id/txtAddPosition"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV3"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV3" />
+        app:layout_constraintStart_toStartOf="@+id/txtAddPosition"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddPosition" />
 
     <EditText
-        android:id="@+id/txtAddAgeNV"
+        android:id="@+id/txtAddCountry"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -72,13 +74,13 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV"
+        app:layout_constraintEnd_toEndOf="@+id/txtAddAge"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV" />
+        app:layout_constraintStart_toStartOf="@+id/txtAddAge"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddAge" />
 
     <Button
-        android:id="@+id/btn_huyNvThem"
+        android:id="@+id/btnUpdate"
         android:layout_width="120dp"
         android:layout_height="52dp"
         android:layout_marginTop="56dp"
@@ -87,10 +89,10 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddAgeNV"
+        app:layout_constraintEnd_toEndOf="@+id/txtAddCountry"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/txtAddAgeNV"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddAgeNV" />
+        app:layout_constraintStart_toStartOf="@+id/txtAddCountry"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddCountry" />
 
     <TextView
         android:id="@+id/textView2"
@@ -108,7 +110,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnBack1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"

@@ -10,16 +10,18 @@
         android:id="@+id/view"
         class="androidx.appcompat.widget.ActionMenuView"
         android:layout_width="365dp"
-        android:layout_height="582dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBack2" />
 
     <EditText
-        android:id="@+id/txtAddNameNV2"
+        android:id="@+id/txtUpdateName"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -33,7 +35,7 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
     <EditText
-        android:id="@+id/txtAddNameNV3"
+        android:id="@+id/txtUpdatePosition"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -42,12 +44,12 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV2"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV2"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV2" />
+        app:layout_constraintEnd_toEndOf="@+id/txtUpdateName"
+        app:layout_constraintStart_toStartOf="@+id/txtUpdateName"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateName" />
 
     <EditText
-        android:id="@+id/txtAddNameNV"
+        android:id="@+id/txtUpdateAge"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
@@ -56,13 +58,13 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV3"
+        app:layout_constraintEnd_toEndOf="@+id/txtUpdatePosition"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV3"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV3" />
+        app:layout_constraintStart_toStartOf="@+id/txtUpdatePosition"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdatePosition" />
 
     <EditText
-        android:id="@+id/txtAddAgeNV"
+        android:id="@+id/txtUpdateCountry"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -71,13 +73,13 @@
         android:inputType="textPersonName"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddNameNV"
+        app:layout_constraintEnd_toEndOf="@+id/txtUpdateAge"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtAddNameNV"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddNameNV" />
+        app:layout_constraintStart_toStartOf="@+id/txtUpdateAge"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateAge" />
 
     <Button
-        android:id="@+id/btn_huyNvThem"
+        android:id="@+id/btnUpdate"
         android:layout_width="120dp"
         android:layout_height="52dp"
         android:layout_marginTop="56dp"
@@ -86,11 +88,11 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/txtAddAgeNV"
-        app:layout_constraintTop_toBottomOf="@+id/txtAddAgeNV" />
+        app:layout_constraintStart_toStartOf="@+id/txtUpdateCountry"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateCountry" />
 
     <Button
-        android:id="@+id/btn_AddNV"
+        android:id="@+id/btnRemove"
         android:layout_width="114dp"
         android:layout_height="50dp"
         android:backgroundTint="#EF0D0D"
@@ -98,9 +100,9 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_huyNvThem"
-        app:layout_constraintEnd_toEndOf="@+id/txtAddAgeNV"
-        app:layout_constraintTop_toTopOf="@+id/btn_huyNvThem" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/txtUpdateCountry"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdate" />
 
     <TextView
         android:id="@+id/textView2"
@@ -117,7 +119,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnBack2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
