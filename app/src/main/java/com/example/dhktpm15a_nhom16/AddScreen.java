@@ -37,7 +37,7 @@ public class AddScreen extends AppCompatActivity {
             startActivity(intent);
         });
 
-        findViewById(R.id.btnUpdate).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnAddNV).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dataNhanVien.addNhanVien(new NhanVien(txtAddName.getText().toString(),txtAddPosition.getText().toString()

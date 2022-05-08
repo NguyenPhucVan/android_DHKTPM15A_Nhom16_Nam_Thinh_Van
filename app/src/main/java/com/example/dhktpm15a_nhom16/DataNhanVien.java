@@ -38,9 +38,9 @@ public class DataNhanVien extends SQLiteOpenHelper {
         db.insert("nhanvien",null, values);
 
     }
-    public int removeNhanVien(int id){
+    public void removeNhanVien(int id){
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.delete("nhanvien","id = ?", new String[]{String.valueOf(id)});
+        db.delete("nhanvien","id = ?", new String[]{id+""});
     }
 
     public List<NhanVien> getAll(){
@@ -72,7 +72,6 @@ public class DataNhanVien extends SQLiteOpenHelper {
     public NhanVien getNVById(int id){
 
         NhanVien nhanVien = new NhanVien();
-        //String sql = "select * from nhanvien where id = "+id;
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -89,7 +88,6 @@ public class DataNhanVien extends SQLiteOpenHelper {
         db.close();
         return nhanVien;
     }
-
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

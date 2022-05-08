@@ -54,7 +54,7 @@ public class NhanVienAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, UpdateScreen.class);
-                intent.putExtra("id",i);
+                intent.putExtra("id",arrayList.get(i).getId());
                 ctx.startActivity(intent);
             }
         });
