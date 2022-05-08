@@ -19,6 +19,7 @@ public class UpdateScreen extends AppCompatActivity {
     DataNhanVien dataNhanVien;
     EditText txtUpdateName,txtUpdatePosition,txtUpdateAge,txtUpdateCountry;
     ArrayList<NhanVien> NVList;
+    NhanVien nhanVienMoi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,32 @@ public class UpdateScreen extends AppCompatActivity {
                 dataNhanVien.removeNhanVien(id);
                 getNVList();
                 Toast.makeText(UpdateScreen.this, "Xóa nhân viên thành công", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UpdateScreen.this, MainScreen.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        findViewById(R.id.btnUpdate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                txtUpdateName.setText(nhanVien.getName());
+//                txtUpdatePosition.setText(nhanVien.getPosition());
+//                txtUpdateAge.setText(nhanVien.getAge()+"");
+//                txtUpdateCountry.setText(nhanVien.getCountry());
+//                txtUpdateName = findViewById(R.id.txtUpdateName);
+//                txtUpdatePosition = findViewById(R.id.txtUpdatePosition);
+//                txtUpdateAge = findViewById(R.id.txtUpdateAge);
+//                txtUpdateCountry = findViewById(R.id.txtUpdateCountry);
+
+                System.out.println("_---------------------------"+txtUpdatePosition.getText().toString());
+
+                nhanVienMoi = new NhanVien(id,txtUpdateName.getText().toString(),txtUpdatePosition.getText().toString()
+                                ,Integer.parseInt(txtUpdateAge.getText().toString()),txtUpdateCountry.getText().toString());
+                dataNhanVien.updateNhanVien(nhanVienMoi);
+                //getNVList();
+                Toast.makeText(UpdateScreen.this, "Cập nhật nhân viên thành công", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(UpdateScreen.this, MainScreen.class);
                 startActivity(intent);
             }

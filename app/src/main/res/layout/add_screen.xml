@@ -85,10 +85,10 @@
         android:layout_height="52dp"
         android:layout_marginTop="56dp"
         android:backgroundTint="#409EF4"
-        android:text="thêm"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:text="thêm"
         app:layout_constraintEnd_toEndOf="@+id/txtAddCountry"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/txtAddCountry"
@@ -120,5 +120,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/back_icon"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

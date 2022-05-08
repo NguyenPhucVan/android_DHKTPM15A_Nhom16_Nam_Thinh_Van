@@ -29,7 +29,6 @@ public class DataNhanVien extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-
         values.put("name",nhanVien.getName());
         values.put("position",nhanVien.getPosition());
         values.put("age",nhanVien.getAge());
@@ -38,6 +37,19 @@ public class DataNhanVien extends SQLiteOpenHelper {
         db.insert("nhanvien",null, values);
 
     }
+    public void updateNhanVien(NhanVien nhanVien){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("name",nhanVien.getName());
+        values.put("position",nhanVien.getPosition());
+        values.put("age",nhanVien.getAge());
+        values.put("country",nhanVien.getCountry());
+
+        db.update("nhanvien",values,"id = ?", new String[]{nhanVien.getId()+""});
+
+    }
+
     public void removeNhanVien(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         db.delete("nhanvien","id = ?", new String[]{id+""});
