@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ public class AddScreen extends AppCompatActivity {
     EditText txtAddName, txtAddPosition,txtAddAge, txtAddCountry;
     DataNhanVien dataNhanVien;
     NhanVien nhanVien;
-    ArrayList NVList;
+    String name,position,country,age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +42,32 @@ public class AddScreen extends AppCompatActivity {
                 txtAddAge = findViewById(R.id.txtAddAge);
                 txtAddCountry = findViewById(R.id.txtAddCountry);
 
-                nhanVien = new NhanVien(txtAddName.getText().toString(),txtAddPosition.getText().toString()
-                        ,Integer.parseInt(txtAddAge.getText().toString()),txtAddCountry.getText().toString());
+                name = txtAddName.getText().toString();
+                position = txtAddPosition.getText().toString();
+                age = txtAddAge.getText().toString();
+                country = txtAddCountry.getText().toString();
 
-                dataNhanVien.addNhanVien(nhanVien);
-                Toast.makeText(AddScreen.this, "Thêm nhân viên thành công", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(AddScreen.this, MainScreen.class);
-                startActivity(intent);
+                if (TextUtils.isEmpty(name)){
+                    txtAddName.setError("Họ tên không được để trống");
+                    txtAddName.requestFocus();
+                    }else if (TextUtils.isEmpty(position)){
+                        txtAddPosition.setError("Chức vụ không được để trống");
+                        txtAddPosition.requestFocus();
+                        }else if (TextUtils.isEmpty(age)){
+                            txtAddAge.setError("Tuổi không được để trống");
+                            txtAddAge.requestFocus();
+                            }else if (TextUtils.isEmpty(country)){
+                                 txtAddCountry.setError("Quê quán không được để trống");
+                                 txtAddCountry.requestFocus();
+                                }
+                else {
+                    nhanVien = new NhanVien(name, position, Integer.parseInt(age), country);
+
+                    dataNhanVien.addNhanVien(nhanVien);
+                    Toast.makeText(AddScreen.this, "Thêm nhân viên thành công", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AddScreen.this, MainScreen.class);
+                    startActivity(intent);
+                }
             }
         });
 

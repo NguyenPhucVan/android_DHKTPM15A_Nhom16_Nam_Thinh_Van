@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ public class UpdateScreen extends AppCompatActivity {
     EditText txtUpdateName,txtUpdatePosition,txtUpdateAge,txtUpdateCountry;
     ArrayList<NhanVien> NVList;
     NhanVien nhanVienMoi;
+    String name,position,country,age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,24 +69,33 @@ public class UpdateScreen extends AppCompatActivity {
         findViewById(R.id.btnUpdate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                txtUpdateName.setText(nhanVien.getName());
-//                txtUpdatePosition.setText(nhanVien.getPosition());
-//                txtUpdateAge.setText(nhanVien.getAge()+"");
-//                txtUpdateCountry.setText(nhanVien.getCountry());
-//                txtUpdateName = findViewById(R.id.txtUpdateName);
-//                txtUpdatePosition = findViewById(R.id.txtUpdatePosition);
-//                txtUpdateAge = findViewById(R.id.txtUpdateAge);
-//                txtUpdateCountry = findViewById(R.id.txtUpdateCountry);
+                name = txtUpdateName.getText().toString();
+                position = txtUpdatePosition.getText().toString();
+                age = txtUpdateAge.getText().toString();
+                country = txtUpdateCountry.getText().toString();
 
-                System.out.println("_---------------------------"+txtUpdatePosition.getText().toString());
+                if (TextUtils.isEmpty(name)){
+                    txtUpdateName.setError("Họ tên không được để trống");
+                    txtUpdateName.requestFocus();
+                }else if (TextUtils.isEmpty(position)){
+                    txtUpdatePosition.setError("Chức vụ không được để trống");
+                    txtUpdatePosition.requestFocus();
+                }else if (TextUtils.isEmpty(age)){
+                    txtUpdateAge.setError("Tuổi không được để trống");
+                    txtUpdateAge.requestFocus();
+                }else if (TextUtils.isEmpty(country)){
+                    txtUpdateCountry.setError("Quê quán không được để trống");
+                    txtUpdateCountry.requestFocus();
+                }
+                else {
 
-                nhanVienMoi = new NhanVien(id,txtUpdateName.getText().toString(),txtUpdatePosition.getText().toString()
-                                ,Integer.parseInt(txtUpdateAge.getText().toString()),txtUpdateCountry.getText().toString());
+                nhanVienMoi = new NhanVien(id,name,position,Integer.parseInt(age),country);
                 dataNhanVien.updateNhanVien(nhanVienMoi);
                 //getNVList();
                 Toast.makeText(UpdateScreen.this, "Cập nhật nhân viên thành công", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(UpdateScreen.this, MainScreen.class);
                 startActivity(intent);
+                }
             }
         });
 
