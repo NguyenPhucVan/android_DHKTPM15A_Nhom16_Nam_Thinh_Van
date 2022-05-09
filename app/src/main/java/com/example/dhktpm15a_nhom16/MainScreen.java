@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -18,11 +22,14 @@ public class MainScreen extends AppCompatActivity {
     NhanVienAdapter adapter;
     ArrayList<NhanVien> NVList;
     ArrayList idList;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
+
+        mAuth = FirebaseAuth.getInstance();
 
         dataNhanVien = new DataNhanVien(this,"nhanviendb.sqlite",null,1);
 
@@ -42,6 +49,14 @@ public class MainScreen extends AppCompatActivity {
             Intent intent = new Intent(MainScreen.this, AddScreen.class);
             startActivity(intent);
         });
+        findViewById(R.id.btnSignOut).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(MainScreen.this, SignInScreen.class);
+                startActivity(intent);
+            }
+        });
 
     }
     //Lấy nhân viên từ sqlite
@@ -53,4 +68,17 @@ public class MainScreen extends AppCompatActivity {
         }
         return NVList;
     }
+
+    //Firebase
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser == null){
+            Intent intent = new Intent(MainScreen.this, SignInScreen.class);
+            startActivity(intent);
+        }
+    }
 }
+
