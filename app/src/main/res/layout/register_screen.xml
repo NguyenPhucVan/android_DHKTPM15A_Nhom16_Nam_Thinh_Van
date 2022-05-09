@@ -26,13 +26,11 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="241dp"
+        android:layout_width="242dp"
         android:layout_height="111dp"
-        android:layout_marginStart="85dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="85dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -41,25 +39,22 @@
         android:id="@+id/txt_dk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="138dp"
         android:text="ĐĂNG KÝ"
         android:textColor="#409EF4"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
         android:id="@+id/txtRegEmail"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textLongMessage"
@@ -73,11 +68,11 @@
 
     <EditText
         android:id="@+id/txtRegPass"
-        android:layout_width="342dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Mật khẩu"
         android:inputType="textPassword"
@@ -86,7 +81,7 @@
         android:textColorHint="#409EF4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtRegEmail" />
 
@@ -113,14 +108,11 @@
         android:id="@+id/txtbanchuacotk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="132dp"
         android:text="Bạn đã có tài khoản?"
         android:textColor="#409EF4"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 

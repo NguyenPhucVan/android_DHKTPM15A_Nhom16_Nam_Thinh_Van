@@ -66,7 +66,7 @@ public class RegisterScreen extends AppCompatActivity {
                                 Intent intent = new Intent(RegisterScreen.this, SignInScreen.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(RegisterScreen.this, "Đăng ký thất bại",
+                                Toast.makeText(RegisterScreen.this, "Đăng ký thất bại, lỗi : "+task.getException().getMessage(),
                                         Toast.LENGTH_SHORT).show();
                             }
                         }

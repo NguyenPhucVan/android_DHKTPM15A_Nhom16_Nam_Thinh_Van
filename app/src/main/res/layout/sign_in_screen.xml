@@ -50,11 +50,11 @@
 
     <EditText
         android:id="@+id/txtSignInEmail"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
@@ -63,17 +63,16 @@
         android:textColorHint="#409EF4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_dk" />
 
     <EditText
         android:id="@+id/txtSignInPass"
-        android:layout_width="342dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="35dp"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="Mật khẩu"
         android:inputType="textPassword"
@@ -82,7 +81,6 @@
         android:textColorHint="#409EF4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSignInEmail" />
 
