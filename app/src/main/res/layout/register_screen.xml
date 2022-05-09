@@ -7,29 +7,29 @@
     android:background="#FDF654">
 
     <Button
-        android:id="@+id/btn_dangNhap3"
+        android:id="@+id/btnRegister"
         android:layout_width="320dp"
         android:layout_height="57dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/round_btn"
         android:backgroundTint="#409EF4"
         android:text="ĐĂNG KÍ"
         android:textColor="#FDF654"
         android:textSize="30dp"
-        android:background="@drawable/round_btn"
         android:textStyle="normal"
         app:circularflow_defaultRadius="30sp"
         app:circularflow_radiusInDP="30sp"
         app:cornerRadius="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintStart_toStartOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintTop_toBottomOf="@+id/dk_xacNhanMatKhau" />
+        app:layout_constraintEnd_toEndOf="@+id/txtRegPass"
+        app:layout_constraintStart_toStartOf="@+id/txtRegPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegPass" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="241dp"
         android:layout_height="111dp"
         android:layout_marginStart="85dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="85dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,34 +54,14 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/dk_tenNguoiDung"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="343dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:hint="Tên người dùng"
-        android:inputType="text"
-        android:textColor="#409EF4"
-        android:textColorHighlight="#409EF4"
-        android:textColorHint="#409EF4"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dk" />
-
-    <EditText
-        android:id="@+id/dk_taiKhoan"
+        android:id="@+id/txtRegEmail"
         android:layout_width="343dp"
         android:layout_height="51dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="35dp"
         android:ems="10"
-        android:hint="Tài khoản"
+        android:hint="Email"
         android:inputType="textLongMessage"
         android:textColor="#409EF4"
         android:textColorHighlight="#409EF4"
@@ -92,26 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_dk" />
 
     <EditText
-        android:id="@+id/dk_xacNhanMatKhau"
-        android:layout_width="342dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="35dp"
-        android:ems="10"
-        android:hint="Xác nhận mật khẩu"
-        android:inputType="textPassword"
-        android:textColor="#409EF4"
-        android:textColorHighlight="#409EF4"
-        android:textColorHint="#409EF4"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dk_matKhau" />
-
-    <EditText
-        android:id="@+id/dk_matKhau"
+        android:id="@+id/txtRegPass"
         android:layout_width="342dp"
         android:layout_height="51dp"
         android:layout_marginStart="35dp"
@@ -127,49 +88,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dk_taiKhoan" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegEmail" />
 
     <Button
-        android:id="@+id/btn_dangNhap2"
+        android:id="@+id/btnSignInNow"
         android:layout_width="232dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_btn"
         android:backgroundTint="#409EF4"
         android:text="ĐĂNG NHẬP NGAY"
         android:textColor="#FDF654"
         android:textSize="18dp"
-        android:background="@drawable/round_btn"
         android:textStyle="normal"
         app:circularflow_defaultRadius="30sp"
         app:circularflow_radiusInDP="30sp"
 
         app:cornerRadius="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_dangNhap3"
-        app:layout_constraintStart_toStartOf="@+id/btn_dangNhap3"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
         app:layout_constraintTop_toBottomOf="@+id/txtbanchuacotk" />
-
-    <TextView
-        android:id="@+id/dn_google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="60dp"
-        android:drawableLeft="@drawable/google1"
-        android:drawablePadding="10dp"
-        android:text="ĐĂNG NHẬP BẰNG GOOGLE"
-        android:textColor="#409EF4"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_dangNhap3" />
 
     <TextView
         android:id="@+id/txtbanchuacotk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="132dp"
         android:text="Bạn đã có tài khoản?"
         android:textColor="#409EF4"
@@ -177,34 +122,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dn_google" />
-
-    <ImageButton
-        android:id="@+id/btn_conMatXacNhanMK"
-        android:layout_width="44dp"
-        android:layout_height="43dp"
-        android:background="#FDF654"
-        app:layout_constraintBottom_toBottomOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintEnd_toEndOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintTop_toTopOf="@+id/dk_xacNhanMatKhau"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/eye"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <ImageButton
-        android:id="@+id/btn_conMatMatKhau"
-        android:layout_width="44dp"
-        android:layout_height="39dp"
-        android:background="#FDF654"
-        app:layout_constraintBottom_toBottomOf="@+id/dk_matKhau"
-        app:layout_constraintEnd_toEndOf="@+id/dk_matKhau"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="@+id/dk_matKhau"
-        app:layout_constraintTop_toBottomOf="@+id/dk_taiKhoan"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/eye"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,10 @@
     android:background="#FDF654">
 
     <Button
-        android:id="@+id/btn_dangNhap2"
+        android:id="@+id/btnRegisterNow"
         android:layout_width="232dp"
         android:layout_height="55dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/round_btn"
         android:backgroundTint="#409EF4"
         android:text="ĐĂNG KÍ NGAY"
@@ -20,9 +20,8 @@
         app:circularflow_defaultRadius="30sp"
         app:circularflow_radiusInDP="30sp"
         app:cornerRadius="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_dangNhap"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/btn_dangNhap"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+        app:layout_constraintStart_toStartOf="@+id/btnSignIn"
         app:layout_constraintTop_toBottomOf="@+id/txtbanchuacotk" />
 
     <ImageView
@@ -39,7 +38,7 @@
         android:id="@+id/txt_dk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="ĐĂNG NHẬP"
         android:textColor="#409EF4"
         android:textSize="32sp"
@@ -50,25 +49,26 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
-        android:id="@+id/dn_taiKhoan"
+        android:id="@+id/txtSignInEmail"
         android:layout_width="343dp"
         android:layout_height="51dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="35dp"
         android:ems="10"
-        android:hint="Tài khoản"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textColor="#409EF4"
         android:textColorHighlight="#409EF4"
         android:textColorHint="#409EF4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_dk" />
 
     <EditText
-        android:id="@+id/dn_matKhau"
+        android:id="@+id/txtSignInPass"
         android:layout_width="342dp"
         android:layout_height="61dp"
         android:layout_marginStart="35dp"
@@ -82,15 +82,16 @@
         android:textColorHint="#409EF4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dn_taiKhoan" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSignInEmail" />
 
     <Button
-        android:id="@+id/btn_dangNhap"
-        android:layout_width="343dp"
-        android:layout_height="66dp"
+        android:id="@+id/btnSignIn"
+        android:layout_width="320dp"
+        android:layout_height="57dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="35dp"
         android:background="@drawable/round_btn"
         android:backgroundTint="#409EF4"
@@ -102,62 +103,20 @@
         app:circularflow_radiusInDP="30sp"
         app:cornerRadius="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dn_matKhau" />
-
-    <TextView
-        android:id="@+id/txt_quenMatKhau"
-        android:layout_width="217dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Quên mật khẩu?"
-        android:textColor="#409EF4"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_dangNhap" />
-
-    <TextView
-        android:id="@+id/dn_google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableLeft="@drawable/google1"
-        android:drawablePadding="10dp"
-        android:text="ĐĂNG NHẬP BẰNG GOOGLE"
-        android:textColor="#409EF4"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_quenMatKhau" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSignInPass" />
 
     <TextView
         android:id="@+id/txtbanchuacotk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:text="Bạn chưa có tài khoản?"
         android:textColor="#409EF4"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dn_google" />
-
-    <ImageButton
-        android:id="@+id/btn_conmatmk"
-        android:layout_width="51dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="9dp"
-        android:background="#FDF654"
-        app:layout_constraintBottom_toBottomOf="@+id/dn_matKhau"
-        app:layout_constraintEnd_toEndOf="@+id/dn_matKhau"
-        app:layout_constraintHorizontal_bias="0.986"
-        app:layout_constraintStart_toStartOf="@+id/dn_matKhau"
-        app:srcCompat="@drawable/eye"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
