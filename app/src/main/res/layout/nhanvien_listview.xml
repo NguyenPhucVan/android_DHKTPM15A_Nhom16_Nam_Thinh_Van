@@ -7,11 +7,11 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="111dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/round_item_nhanvien"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,12 +21,12 @@
         android:id="@+id/txtName"
         android:layout_width="282dp"
         android:layout_height="26dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view2" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/txtPosition"
         android:layout_width="278dp"
         android:layout_height="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         android:textColor="#FF515151"
         app:layout_constraintStart_toStartOf="@+id/txtName"
@@ -42,14 +42,14 @@
 
     <ImageButton
         android:id="@+id/btnInfor"
-        android:layout_width="33dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/txtName"
         app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintHorizontal_bias="0.564"
-        app:layout_constraintStart_toEndOf="@+id/txtName"
-        app:layout_constraintTop_toTopOf="@+id/txtName"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/info_icon"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
